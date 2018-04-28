@@ -182,6 +182,44 @@ public class JavaStart{
     do tej samej referencji (miejsca w pamięci)
     */
 
+//5. Funkcje matematyczne i wielkie liczby
+
+    /* 
+    Biblioteka Math z pakietu java.lang pozwala nam korzystać
+    z funkcji matematycznych (pierwiastki, wartosc bezwzgledna, funkcje trygonoemtryczne itp.)
+    Najważniejsze funkcje:
+    - sqrt (double liczba) - zwraca pierwiastek z liczby double, mozemy podac inny typ danych,
+    wtedy następuje automatyczna konwersja na double
+    - pow (double a, double b) - zwraca liczbę 'a' podniesioną do potęgi 'b'
+    - abs (liczba) - metoda zwraca wartosc bezwzględną dowolnej liczby
+    Metody są statyczne, wywołujemy je konstrukcją:
+
+    Math.nazwa_metody(argumenty);
+
+    W klasie Math występują też dwie stałe:
+    - Pi - Math.PI
+    - E - Math.E
+    Dzięki temu nie musimy deklarować własnych. Wywołujemy je podobnie jak funkcje.
+
+    Przykłady:
+    */
+
+    int liczba = 16; //sprawdzam konwersję int do double w metodzie sqrt();
+    int wykladnik = 3;
+    double pierwiastek = Math.sqrt(liczba);
+    double potega = Math.pow(liczba, wykladnik);
+    double pi = Math.PI;
+
+
+    System.out.println("Pierwiastek z "+liczba+" wynosi: "+pierwiastek);
+    System.out.println("Liczba "+liczba+" podniesiona do potegi "+wykladnik+" wynosi: "+potega);
+    System.out.println("Pi wynosi "+pi);
+
+    /*Można również zastosować IMPORT STATYCZNY biblioteki Math 
+    (patrz: osobny plik Funkcje)
+    */
+
+
 
 
   }
