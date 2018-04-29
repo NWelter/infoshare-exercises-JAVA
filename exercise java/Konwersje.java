@@ -53,7 +53,7 @@
       System.out.println(rzutowana);
       //wynik - wartość decymalna znaku z tablicy ASCII
 
-  //Strumienie Wejścia/Wyjścia:
+  
 
 
 
