@@ -26,14 +26,14 @@ public class Homework22{
     
     //menu powitalne
 
-      System.out.println("MENU PROGRAMU");
-      System.out.println("Podaj imie: wcisnij 1");
-      System.out.println("Zadeklaruj wartosc graniczna: wcisnij 2");
-      System.out.println("Wprowadz dane do tablicy: wcisnij 3");
-      System.out.println("Wyswietl wynik: wcisnij 4");
-      System.out.println("Wyjscie z programu: wcisnij \"q\"");
+    System.out.println("MENU PROGRAMU");
+    System.out.println("Podaj imie: wcisnij 1");
+    System.out.println("Zadeklaruj wartosc graniczna: wcisnij 2");
+    System.out.println("Wprowadz dane do tablicy: wcisnij 3");
+    System.out.println("Wyswietl wynik: wcisnij 4");
+    System.out.println("Wyjscie z programu: wcisnij \"q\"");
 
-      do{
+    do{
 
     //pobieranie danych od użytkownika
 
