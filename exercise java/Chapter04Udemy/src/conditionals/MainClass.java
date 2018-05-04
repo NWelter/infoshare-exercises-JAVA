@@ -250,6 +250,23 @@ System.out.println("Enter your points: ");
 			
 		}else
 			System.out.println("It's not a natural number!");
+		
+		/*
+		 * SOLUTION FROM TUTORIAL (ANOTHER WAY):
+		 * 
+		 * Math.sqrt(int) - method returns the square root from number (pierwiastek kwadratowy)
+		 * boolean isPrime = true;
+		 * 
+		 * for (int i=2; i<=Math.sqrt(number2); i++){ 
+		 * if (number2 % 2 == 0)
+		 * is Prime = false;
+		 * }
+		 * if(isPrime)
+		 * System.out.println("The number is prime");
+		 * else
+		 * System.out.println("The number isn't prime");
+		 * 
+		 */
 
 	}
 
