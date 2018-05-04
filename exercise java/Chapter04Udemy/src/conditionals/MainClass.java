@@ -229,6 +229,27 @@ System.out.println("Enter your points: ");
 			System.out.println("Incorrect grade!");
 				
 		}
+		
+		/*
+		 * QUIZ TASK 4: Write a program that will prompt the user to enter a number
+		 * and then check whether the number is a prime or not.
+		 */
+		
+		System.out.println("Enter your natural number: ");
+		
+		int number2 = reader.nextInt();
+		
+		if (number2>1) {
+			
+			if(number2==3)
+				System.out.println("It's a prime number.");
+			else if(number2%2==0 || number2%3==0)
+				System.out.println("It's natural number but not a prime number.");
+			else
+				System.out.println("It's a prime number.");
+			
+		}else
+			System.out.println("It's not a natural number!");
 
 	}
 
