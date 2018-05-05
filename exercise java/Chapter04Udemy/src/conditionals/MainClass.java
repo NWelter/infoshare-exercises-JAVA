@@ -252,7 +252,7 @@ System.out.println("Enter your points: ");
 			System.out.println("It's not a natural number!");
 		
 		/*
-		 * SOLUTION FROM TUTORIAL (ANOTHER -> better WAY):
+		 * SOLUTION FROM TUTORIAL (ANOTHER -> better, more consistent way):
 		 * 
 		 * Math.sqrt(int) - method returns the square root from number (pierwiastek kwadratowy)
 		 * 
@@ -269,7 +269,8 @@ System.out.println("Enter your points: ");
 		 * System.out.println("The number isn't prime");
 		 * 
 		 */
-
+		
+		
 	}
 
 }
