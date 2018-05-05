@@ -241,7 +241,7 @@ System.out.println("Enter your points: ");
 		
 		if (number2>1) {
 			
-			if(number2==3)
+			if(number2==3 || number2==2)
 				System.out.println("It's a prime number.");
 			else if(number2%2==0 || number2%3==0)
 				System.out.println("It's natural number but not a prime number.");
@@ -252,9 +252,11 @@ System.out.println("Enter your points: ");
 			System.out.println("It's not a natural number!");
 		
 		/*
-		 * SOLUTION FROM TUTORIAL (ANOTHER WAY):
+		 * SOLUTION FROM TUTORIAL (ANOTHER -> better WAY):
 		 * 
 		 * Math.sqrt(int) - method returns the square root from number (pierwiastek kwadratowy)
+		 * 
+		 * 
 		 * boolean isPrime = true;
 		 * 
 		 * for (int i=2; i<=Math.sqrt(number2); i++){ 
