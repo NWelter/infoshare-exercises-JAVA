@@ -21,7 +21,7 @@ public class MainClass {
         //method which return result of search:
         Contact resultOfSearch = myContactsManager.searchContact("Dzik");
         System.out.println("Name: " + resultOfSearch.name + ", Phone number: " + resultOfSearch.phoneNumber);
-        
+
 
     }
 }
