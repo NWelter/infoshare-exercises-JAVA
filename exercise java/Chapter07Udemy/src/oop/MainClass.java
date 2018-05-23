@@ -51,9 +51,13 @@ public class MainClass {
 		testing.printOut("Something will be printed out!");
 		
 		
-		//calling getters and setters:
+		//calling getters and setters methods:
 		
+		//we use default constructor to create an object:
 		GettersAndSetter testingvar = new GettersAndSetter();
+		
+		//we use custom constructor with parameters to create another object:
+		GettersAndSetter testingpar = new GettersAndSetter(39);
 		
 		//values of num1 and num2 are null:
 		System.out.println("The value of num1 is "+ testingvar.getNum1());
@@ -64,7 +68,7 @@ public class MainClass {
 		System.out.println("The value of num1 is "+ testingvar.getNum1());
 		testingvar.setNum2(2.17);
 		System.out.println("The value of num2 is "+ testingvar.getNum2());
-		
+		System.out.println("The value of num1 with custom constructor is "+ testingpar.getNum1());
 	}
 
 }

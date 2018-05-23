@@ -13,12 +13,26 @@ public class GettersAndSetter {
 	 * 1. getters methods start with 'get', they're THE SAME TYPE as variables.
 	 * 2. setters method start with 'set', they're void types with parameter value.
 	 */
-	
+	//FIELDS:
 	private double num1,num2;
 	
+	//CONSTRUCTORS:
+	
+	//We MUST create default constructor IF we create another, custom one:
+	
+	//default
+	public GettersAndSetter() {
+		
+	}
+	//custom
+	public GettersAndSetter ( double param1) {
+		
+		num1 = param1;
+	}
+	
+	//METHODS:
+	
 	//getters and setters MUST BE PUBLIC. 
-	
-	
 	public double getNum1() {
 		return num1;
 	}
@@ -34,7 +48,7 @@ public class GettersAndSetter {
 	}
 	
 	/*
-	 * We can use 'a' cause it's an only local method's variable.
+	 * We can use 'a' cause it's only a local method's variable.
 	 * Parameter value must be the same type as in class field.
 	 */
 	
