@@ -51,6 +51,20 @@ public class MainClass {
 		testing.printOut("Something will be printed out!");
 		
 		
+		//calling getters and setters:
+		
+		GettersAndSetter testingvar = new GettersAndSetter();
+		
+		//values of num1 and num2 are null:
+		System.out.println("The value of num1 is "+ testingvar.getNum1());
+		System.out.println("The value of num2 is "+ testingvar.getNum2());
+		
+		//change the values:
+		testingvar.setNum1(3.14);
+		System.out.println("The value of num1 is "+ testingvar.getNum1());
+		testingvar.setNum2(2.17);
+		System.out.println("The value of num2 is "+ testingvar.getNum2());
+		
 	}
 
 }

@@ -46,42 +46,39 @@ public class AccessModifiers {
 	 * public/private/protected int/String/void etc. firstLowerCase (int, String,
 	 * double etc.) { BODY OF THE METHOD; (if not void type): return; }
 	 */
-	
-	//method type 'void':
+
+	// method type 'void':
 	public void displayHello() {
 
 		System.out.println("Hello!");
 
 	}
-	
-	//method returns double type of values:
-	
+
+	// method returns double type of values:
+
 	public double addTwoNumbers(double d, double e) {
-		
+
 		return d + e;
-		
+
 		/*
-		 * another way is create a new value:
-		 * double result = d + e;
-		 * return result;
-		 * but this way is less efficient than example above this comment
-		 */		
+		 * another way is create a new value: double result = d + e; return result; but
+		 * this way is less efficient than example above this comment
+		 */
 	}
-	
-	public void greaterNumb (int a, int b) {
-		
-		if(a>b)
-			System.out.println(a+" is greater than "+b);
-		else if(a==b)
-			System.out.println(a+" is equal to "+b);
+
+	public void greaterNumb(int a, int b) {
+
+		if (a > b)
+			System.out.println(a + " is greater than " + b);
+		else if (a == b)
+			System.out.println(a + " is equal to " + b);
 		else
-			System.out.println(b+" is greater than "+a);
+			System.out.println(b + " is greater than " + a);
 	}
-	
-	public void printOut (String x) {
-		
+
+	public void printOut(String x) {
+
 		System.out.println(x);
 	}
-	
 
 }
