@@ -192,6 +192,8 @@ public class JavaStart{
     wtedy następuje automatyczna konwersja na double
     - pow (double a, double b) - zwraca liczbę 'a' podniesioną do potęgi 'b'
     - abs (liczba) - metoda zwraca wartosc bezwzględną dowolnej liczby
+    - floor (double a) - zaokrągla do najbliższej liczby całkowitej MNIEJSZEJ 
+    lub równej podanej liczbie (np. -4 dla -3.1, 127 dla 127.98 itp.).
     Metody są statyczne, wywołujemy je konstrukcją:
 
     Math.nazwa_metody(argumenty);
