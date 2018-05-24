@@ -178,14 +178,29 @@ public class Student {
 
 	// METHODS:
 
-	// calculate the average GPA grade of the two semesters
+	/*
+	 * Calculate the average GPA grade of the two semesters.
+	 * This method is from tutorial and has some issue:
+	 * average number of 'D'(value 68 in ASCII) +'F'(value 70 in ASCII) is 'E' (69)
+	 * but 'E' is not valid grade!
+	 */
 	
 	
-	public double gpa() {
+	public char gpa(int semestr1GPA, int semestr2GPA) {
+		
+		/*
+		 * Math.floor() - This function maps a number to the nearest lowest integer. 
+		 * For example 4.9 is mapped to 4. 
+		 * It works on negative numbers too: -3.1 maps to -4.
+		 */
+		
+		char gpa = (char) Math.floor((semestr1GPA+semestr2GPA)/2.0);
+		if(isValidGrade(gpa))
+			return gpa;
+		else
+			return gpa='X';
 
-		double gpa = 0;
-
-		return gpa;
+		 
 	}
 
 	// check if student's id is between 10000 and 99999:
@@ -229,7 +244,7 @@ public class Student {
 		System.out.println("Student first name: " + getFirstName() + "\nlast name: " + getLastName() + "\nadress: "
 				+ getAddress() + "\nphone number: " + getPhonenumber() + "\ndate of birth: " + getDateOfBirth()
 				+ "\ne-mail: " + getEmail() + "\nID: " + getStudentIdNumber() + "\nsemestr I. GPA: " + getSemestr1GPA()
-				+ "\nsemestr II. GPA: " + getSemestr2GPA());
+				+ "\nsemestr II. GPA: " + getSemestr2GPA()+"\nGPA: "+gpa(getSemestr1GPA(), getSemestr2GPA()));
 
 	}
 	
