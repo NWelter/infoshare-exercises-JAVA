@@ -46,12 +46,14 @@ public class LibraryTest {
         //given:
 
         Library library = new Library(books);
-        Book testBook = new Book("Lem, Stanisław", "Bajki robotów", 2);
+        Book testbook = new Book("Lem, Stanisław", "Bajki robotów", 2);
+
 
         //when:
-        boolean isAvailable = library.isBookAvailable(testBook);
+        boolean isAvailable = library.isBookAvailable(testbook);
 
         //then:
+        //System.out.println(isAvailable);
 
         Assert.assertTrue(isAvailable);
 
