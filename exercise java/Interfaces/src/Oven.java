@@ -35,23 +35,8 @@ public class Oven implements BackingOven, RoastingOven {
 
     private void turnOn(){
 
-        System.out.println(String.format("Start. Heat up to %s for %d minutes", temperature, time));
+        System.out.println(String.format("Start. Heat up to %s and work for %d minutes", temperature, time));
     }
 
-    public static void main(String[] args) {
 
-        //create Oven object with different interfaces
-
-        Oven oven = new Oven();
-        BackingOven backingOven = oven;
-        RoastingOven roastingOven = oven;
-
-        backingOven.bakeBread();
-        backingOven.bakeCookies();
-
-        roastingOven.roastChicken();
-
-
-
-    }
 }
