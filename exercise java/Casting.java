@@ -29,5 +29,23 @@ public class Casting {
         long bigNegativeNumberCast = Integer.MIN_VALUE-1L; 
         System.out.println(bigNegativeNumberCast); //appropriate value: -2147483649
 
+
+        /*
+        CLASS CASTING
+        if we have superclass Animal and subclass Cat (with own method meow()).
+        If we want use a variable of type Animal to invoke a method available only to Cat class
+        we use downcasting: CASTING FROM A SUPERCLASS TO A SUBCLASS:
+
+        Animal animal = new Cat();
+        We know that animal variable refers to the instance of Cat.
+         And we want to invoke Cat’s meow() method on the animal. 
+         But the compiler complains that meow() method doesn’t exist for the type Animal.
+
+        To call meow() we should downcast animal to Cat:
+        ((Cat) animal).meow(); -> cast operator
+
+
+       */
+
     }
 }
