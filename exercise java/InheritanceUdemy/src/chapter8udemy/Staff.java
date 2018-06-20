@@ -85,4 +85,27 @@ public class Staff {
         System.out.println(stringBuilder.toString());
 
     }
+    //method overloading:
+
+    //method calculate salary for full-time professor
+
+    public double salary (int numberOfCourses){
+
+        double coefficient = 4.5; //współczynnik
+        double base = 265.5;
+        
+        if (numberOfCourses>1){
+            for (int i = 1; i <numberOfCourses ; i++) {
+                coefficient += 0.5;
+            }
+        }
+        return coefficient*base;
+    }
+
+    //method calculate salary for part-time professor
+    public double salary (double coefficient){
+
+        double base = 265.5;
+        return coefficient*base;
+    }
 }
