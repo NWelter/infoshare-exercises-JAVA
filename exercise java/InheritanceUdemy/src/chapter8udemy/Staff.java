@@ -73,7 +73,23 @@ public class Staff {
 
     //other methods:
 
-    public void info (){
+
+//    public void info (){
+//
+//        StringBuilder stringBuilder = new StringBuilder();
+//        stringBuilder.append("First name: ").append(getFirstName()).append("\n")
+//                .append("Last name: ").append(getLastName()).append("\n")
+//                .append("Phone number: ").append(getPhoneNumber()).append("\n")
+//                .append("Address: ").append(getAddress()).append("\n")
+//                .append("E-mail: ").append(getEmail()).append("\n")
+//                .append("Department: ").append(getDepartment()).append("\n");
+//        System.out.println(stringBuilder.toString());
+//
+//    }
+    //method overriding
+
+    @Override
+    public String toString(){
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("First name: ").append(getFirstName()).append("\n")
@@ -82,7 +98,7 @@ public class Staff {
                 .append("Address: ").append(getAddress()).append("\n")
                 .append("E-mail: ").append(getEmail()).append("\n")
                 .append("Department: ").append(getDepartment()).append("\n");
-        System.out.println(stringBuilder.toString());
+        return stringBuilder.toString();
 
     }
     //method overloading:

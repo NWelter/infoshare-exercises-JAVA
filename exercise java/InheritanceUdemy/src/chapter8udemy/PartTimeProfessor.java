@@ -24,4 +24,13 @@ public class PartTimeProfessor extends Staff {
         return getNumberOfLectures()*1.5;
     }
 
+    @Override
+
+    public String toString(){
+
+        StringBuilder stringBuilder = new StringBuilder(super.toString());
+        stringBuilder.append("Number of lectures: ").append(getNumberOfLectures()).append("\n");
+        return stringBuilder.toString();
+    }
+
 }

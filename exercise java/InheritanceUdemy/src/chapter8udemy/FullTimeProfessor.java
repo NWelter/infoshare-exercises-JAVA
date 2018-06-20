@@ -50,5 +50,16 @@ public class FullTimeProfessor extends Staff {
         this.officePhone = officePhone;
     }
 
+    @Override
+    public String toString(){
+
+        StringBuilder stringBuilder = new StringBuilder(super.toString());
+        stringBuilder.append("Office number: ").append(getOfficeNumber()).append("\n")
+                .append("Office hours: ").append(getOfficeHours()).append("\n")
+                .append("Number of lectures: ").append(getNumberOfCourses()).append("\n")
+                .append("Office phone: ").append(getOfficePhone()).append("\n");
+        return stringBuilder.toString();
+    }
+
 
 }
