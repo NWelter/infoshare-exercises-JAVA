@@ -51,7 +51,20 @@ public class FullTimeProfessor extends Staff {
     }
 
     @Override
-    public String toString(){
+    public double salary() {
+        double coefficient = 4.5; //współczynnik
+        double base = 265.5;
+
+        if (getNumberOfCourses() > 1) {
+            for (int i = 1; i < getNumberOfCourses(); i++) {
+                coefficient += 0.5;
+            }
+        }
+        return coefficient * base;
+    }
+
+    @Override
+    public String toString() {
 
         StringBuilder stringBuilder = new StringBuilder(super.toString());
         stringBuilder.append("Office number: ").append(getOfficeNumber()).append("\n")

@@ -1,6 +1,6 @@
 package chapter8udemy;
 
-public class Staff {
+public abstract class Staff {
 
     //fields
     private String firstName;
@@ -10,7 +10,7 @@ public class Staff {
     private String address;
     private String department;
 
-    //constructor
+    //constructor -but we can't create Staff object from an abstract class
     public Staff(String firstName, String lastName, String phoneNumber,
                  String email, String address, String department) {
 
@@ -89,7 +89,7 @@ public class Staff {
     //method overriding
 
     @Override
-    public String toString(){
+    public String toString() {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("First name: ").append(getFirstName()).append("\n")
@@ -105,23 +105,28 @@ public class Staff {
 
     //method calculate salary for full-time professor
 
-    public double salary (int numberOfCourses){
-
-        double coefficient = 4.5; //współczynnik
-        double base = 265.5;
-        
-        if (numberOfCourses>1){
-            for (int i = 1; i <numberOfCourses ; i++) {
-                coefficient += 0.5;
-            }
-        }
-        return coefficient*base;
-    }
+//    public double salary (int numberOfCourses){
+//
+//        double coefficient = 4.5; //współczynnik
+//        double base = 265.5;
+//
+//        if (numberOfCourses>1){
+//            for (int i = 1; i <numberOfCourses ; i++) {
+//                coefficient += 0.5;
+//            }
+//        }
+//        return coefficient*base;
+//    }
 
     //method calculate salary for part-time professor
-    public double salary (double coefficient){
+//    public double salary (double coefficient){
+//
+//        double base = 265.5;
+//        return coefficient*base;
+//    }
 
-        double base = 265.5;
-        return coefficient*base;
-    }
+    //create an abstract method (they are not necessary):
+
+    public abstract double salary();
+
 }

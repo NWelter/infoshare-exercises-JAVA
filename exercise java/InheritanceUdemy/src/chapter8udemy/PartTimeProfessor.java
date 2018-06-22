@@ -24,7 +24,15 @@ public class PartTimeProfessor extends Staff {
         return getNumberOfLectures()*1.5;
     }
 
+    //override abstract method (with method calculateCoefficient () calling):
+
     @Override
+
+    public double salary (){
+
+        double base = 265.5;
+        return calculateCoefficient()*base;
+    }
 
     public String toString(){
 
