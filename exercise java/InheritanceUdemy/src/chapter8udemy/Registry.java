@@ -1,6 +1,6 @@
 package chapter8udemy;
 
-public class Registry extends Staff {
+public class Registry extends Staff implements Salary{
 
 
     private int workingHours;

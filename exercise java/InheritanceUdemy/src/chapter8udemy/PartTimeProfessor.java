@@ -1,6 +1,6 @@
 package chapter8udemy;
 
-public class PartTimeProfessor extends Staff {
+public class PartTimeProfessor extends Staff implements Salary {
 
     private int numberOfLectures;
 

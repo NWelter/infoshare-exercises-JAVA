@@ -1,12 +1,12 @@
 package chapter8udemy;
 
-public class TeachingAssistent extends Staff {
+public class TeachingAssistant extends Staff implements Salary {
 
 
     private String officeHours;
     private int numberOfCourses;
 
-    public TeachingAssistent(String firstName, String lastName, String phoneNumber,
+    public TeachingAssistant(String firstName, String lastName, String phoneNumber,
                              String email, String address, String department,
                              String officeHours, int numberOfCourses) {
 

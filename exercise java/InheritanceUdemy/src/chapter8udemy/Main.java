@@ -42,5 +42,23 @@ public class Main {
         System.out.println("Full time professor's salary is: "
                 + fullTimeProfessor.salary());
 
+        TeachingAssistant teachingAssistant = new TeachingAssistant("Roman", "Wąs","21232322","was@was.pl",
+                "MAkowa 2 Lublin", "Microbiology", "8-13", 4);
+
+        System.out.println(teachingAssistant.toString());
+        System.out.println("Teaching assistant's salary is:"+ teachingAssistant.salary());
+
+        Registry registry = new Registry("Anna","Wyka", "337633","a@pl.",
+                "Majowa 2/4 Rzeszów","Biotechnology Institute", 120, "21 3372", 121);
+
+        System.out.println(registry.toString());
+        System.out.println("Registry's salary is: "+registry.salary());
+
+        Finance finance = new Finance("Błażej", "Pol","4555666","bla@zej.pol",
+                "Śrutowa 11 Świdnik", "Payment", 100, "34455", 113);
+
+        System.out.println(finance.toString());
+        System.out.println("Finance's salary is: "+finance.salary());
+
     }
 }

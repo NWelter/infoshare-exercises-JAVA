@@ -127,6 +127,8 @@ public abstract class Staff {
 
     //create an abstract method (they are not necessary):
 
-    public abstract double salary();
+//    we remove abstract class salary() and create a new interface, which implements this method:
+
+//    public abstract double salary();
 
 }

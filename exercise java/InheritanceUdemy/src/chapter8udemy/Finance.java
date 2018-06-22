@@ -1,6 +1,6 @@
 package chapter8udemy;
 
-public class Finance extends Staff {
+public class Finance extends Staff implements Salary {
     private int workingHours;
     private String officePhone;
     private int officeNumber;

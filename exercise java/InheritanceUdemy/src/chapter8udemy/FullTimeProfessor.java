@@ -1,6 +1,6 @@
 package chapter8udemy;
 
-public class FullTimeProfessor extends Staff {
+public class FullTimeProfessor extends Staff implements Salary{
 
     private int officeNumber;
     private String officeHours;
