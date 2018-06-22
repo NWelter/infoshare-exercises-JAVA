@@ -10,14 +10,14 @@ public class Main {
 
         //create object from another package (machines)-only for practice import:
 
-        Machine machine = new Machine();
-        Car car = new Car();
+        Machine machine = new Machine(11);
+        Car car = new Car(10);
         machine.stop();
         car.wipeWindshield();
 
         //PROPER SOURCE CODE:
 
-//        we can't use now object from Staff -Staff is now an abstract class:
+//        we can't use Staff's object -Staff is now an abstract class:
 
 //        Staff staff = new Staff("Anna", "Buda", "53323433",
 //                "buda@anna.pl", "Krańcowa 8, Lublin", "Biochemistry");

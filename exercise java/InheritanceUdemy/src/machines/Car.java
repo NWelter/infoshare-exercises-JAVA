@@ -2,6 +2,9 @@ package machines;
 
 public class Car extends Machine {
 
+    public Car(int id) {
+        super(id);
+    }
 
     @Override
     public void start() {

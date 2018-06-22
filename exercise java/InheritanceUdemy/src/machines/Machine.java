@@ -1,6 +1,12 @@
 package machines;
 
-public class Machine {
+public class Machine implements Info{
+
+    private int id;
+    public Machine (int id){
+        this.id =id;
+        System.out.println("I am Machine constructor!");
+    }
 
     public void start (){
 
@@ -9,5 +15,10 @@ public class Machine {
 
     public void stop (){
         System.out.println("Machine stopped.");
+    }
+
+    @Override
+    public void showInfo() {
+        System.out.println("Machine ID is: "+id);
     }
 }
