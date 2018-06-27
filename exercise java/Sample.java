@@ -18,6 +18,5 @@ public class Sample{
 // wyswietlanie cudzyslowia
 		System.out.println("\"Witaj "+imie+"!"+" Masz "+wiek+" lat.\"");
 
-		
 	}
 }
