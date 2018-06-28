@@ -21,4 +21,9 @@ public class Machine implements Info{
     public void showInfo() {
         System.out.println("Machine ID is: "+id);
     }
+
+    @Override
+    public String toString() {
+        return "I am a machine!";
+    }
 }
