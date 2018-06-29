@@ -20,4 +20,8 @@ public class Car extends Machine {
         System.out.println("Wiping windshield.");
 
     }
+    @Override
+    public String toString(){
+        return "I am a car!";
+    }
 }

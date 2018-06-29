@@ -1,6 +1,7 @@
 package generics;
 
 import machines.Camera;
+import machines.Car;
 import machines.Machine;
 
 import java.util.ArrayList;
@@ -64,8 +65,13 @@ public class Main {
         System.out.println("...and for String list:");
         showCameraList(listString);
 
-        //D. We could UPPER BOUNDED WILDCARDS -see method below (nr 4.)
-
+        //D. We could UPPER BOUNDED WILDCARD -see method below (nr 4.)
+        ArrayList<Machine> listUpperBounded = new ArrayList<>();
+        System.out.println("We could use showUpperBoundedList() method for all Machine's extend classes:");
+        listUpperBounded.add(new Machine(1));
+        listUpperBounded.add(new Camera(4));
+        listUpperBounded.add(new Car(15));
+        showUpperBoundedList(listUpperBounded);
 
 
     }
