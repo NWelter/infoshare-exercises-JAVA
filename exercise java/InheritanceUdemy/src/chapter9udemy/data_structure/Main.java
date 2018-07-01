@@ -1,12 +1,16 @@
 package chapter9udemy.data_structure;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         ////I. ARRAY LIST ////
+
+        //ArrayList is an interface of List:
+
+        List<String> someStringList = new ArrayList<>();
+        System.out.println("Is someStringList empty? " + someStringList.isEmpty());
+
         //A simply example of ArrayList:
 
         ArrayList<Integer> listInteger = new ArrayList<>();
@@ -72,6 +76,8 @@ public class Main {
         1. hasNext(); -return boolean value if there is a next element (T) or not (F) in a data container,
         2. next(); - return next element of collection - if next element not exist, then method throws an Exception,
         3. remove(); - remove an element from collection,
+        **IMPORTANT! Remove elements from beginning the list is VERY SLOW:
+        ex. when we remove item with index 0, then all elements must be assigned to the new index
         4. iterator(); - return iterator which points to the first element found inside a data container
         5. isEmpty(); - return boolean value - true if the container is empty, false otherwise;
         6. clear(); - remove all elements from the collection
@@ -83,8 +89,15 @@ public class Main {
             integerArrayList.add(i);
         }
 
-        //print out this elements using methods from Iterator class:
-        System.out.println("\nPrint elements of the integerArrayList: ");
+        // Print out this elements in different way:
+        // 1. Standard 'for i' loop:
+        System.out.println("\nPrint list with a standard 'for' loop: \n");
+        for (int i = 0; i < integerArrayList.size(); i++) {
+            System.out.print(integerArrayList.get(i) + " ");
+
+        }
+        // 2.using methods from Iterator class:
+        System.out.println("\nPrint elements of the integerArrayList with Iterator's class methods: ");
 
         for (Iterator<Integer> i = integerArrayList.iterator(); i.hasNext(); ) {
             System.out.print(i.next() + " ");
@@ -96,6 +109,12 @@ public class Main {
         - i.hasNext() - boolean condition, loop works until value of hasNext() is true
         - iterator i++ is not necessary, cause we use method i.next() to search (and print) next element of the list
          */
+
+        // 3. using 'for each' loop:
+        System.out.println("\nPrint list with a standard 'for each' loop: ");
+        for (Integer value : integerArrayList) {
+            System.out.print(value + " ");
+        }
 
         System.out.println("\nAfter clear the list:");
 
@@ -133,10 +152,11 @@ public class Main {
         p1 points to the memory address of element2
         p2 points to the memory location of element3
 
-        In traditional array it's look like this:
+        In traditional ArrayList it's look like this:
         RAM
         [e1][e2][e3][e4]
-        (+) it is faster and uses less memory
+        (+) it is faster and uses less memory when we add elements to the end of list, otherwise is much more slow!
+        (see examples and methods below)
         (-) we cannot dynamically grow this array! we must declare a size of traditional array in advance!
          */
 
@@ -173,9 +193,52 @@ public class Main {
         //get index of element:
         System.out.println(stringLinkedList.indexOf("How is it going? "));
         //change element:
-        stringLinkedList.set(2,"Bad luck!");
+        stringLinkedList.set(2, "Bad luck!");
         System.out.println(stringLinkedList.get(2));
 
+        // Compare speed of adding elements to the AraryList and LinkedList (see method below):
+        List<Integer> arrayList = new ArrayList<>();
+        List<Integer> linkedList = new LinkedList<>();
+
+        doTimingIfAddAtTheEndOfList("Array List: ", arrayList);
+        doTimingIfAddAtTheEndOfList("Linked List", linkedList);
+        doTimingIfAddElsewhereInList("Array List: ", arrayList);
+        doTimingIfAddElsewhereInList("Linked List: ", linkedList);
+
+
+    }
+
+    private static void doTimingIfAddAtTheEndOfList(String type, List<Integer> list) {
+
+        for (int i = 0; i < 1E5; i++) {
+            list.add(i);
+        }
+        long start = System.currentTimeMillis();
+
+        //add items at the end of list:
+        for (int i = 0; i < 1E5; i++) {
+            list.add(i);
+        }
+        long stop = System.currentTimeMillis();
+
+        System.out.println("If we add element at the end of list.\nTime taken: " + (stop - start) + " ms for " + type);
+
+
+    }
+
+    private static void doTimingIfAddElsewhereInList(String type, List<Integer> list) {
+        for (int i = 0; i < 1E5; i++) {
+            list.add(i);
+        }
+        long start = System.currentTimeMillis();
+
+        //add items elsewhere in list:
+        for (int i = 0; i < 1E5; i++) {
+            list.add(0, i);
+        }
+        long stop = System.currentTimeMillis();
+
+        System.out.println("When we add items to begin or elsewhere in list.\nTime taken: " + (stop - start) + " ms for " + type);
 
     }
 }
