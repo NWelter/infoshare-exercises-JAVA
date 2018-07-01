@@ -1,4 +1,4 @@
-package chapter8udemy;
+package chapter8udemy.inheritance.polymorphism;
 
 public class FullTimeProfessor extends Staff implements Salary{
 

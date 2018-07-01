@@ -1,14 +1,12 @@
-package chapter8udemy;
+package chapter8udemy.inheritance.polymorphism;
 
-public class Registry extends Staff implements Salary{
-
-
+public class Finance extends Staff implements Salary {
     private int workingHours;
     private String officePhone;
     private int officeNumber;
 
-    public Registry(String firstName, String lastName, String phoneNumber,
-                    String email, String address, String department, int workingHours, String officePhone, int officeNumber) {
+    public Finance(String firstName, String lastName, String phoneNumber,
+                   String email, String address, String department, int workingHours, String officePhone, int officeNumber) {
         super(firstName, lastName, phoneNumber, email, address, department);
         this.workingHours = workingHours;
         this.officePhone = officePhone;
@@ -41,7 +39,7 @@ public class Registry extends Staff implements Salary{
 
     @Override
     public double salary() {
-        double base = 24.5;
+        double base = 26.5;
         return base * getWorkingHours();
     }
 
@@ -55,4 +53,3 @@ public class Registry extends Staff implements Salary{
         return stringBuilder.toString();
     }
 }
-

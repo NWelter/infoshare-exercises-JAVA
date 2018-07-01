@@ -1,4 +1,4 @@
-package chapter8udemy;
+package chapter8udemy.inheritance.polymorphism;
 
 public class TeachingAssistant extends Staff implements Salary {
 
