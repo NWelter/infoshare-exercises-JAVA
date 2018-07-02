@@ -1,4 +1,4 @@
-package chapter9udemy.data_structure;
+package chapter9udemy.data_structure.arrayList_linkedList;
 
 import java.util.*;
 
