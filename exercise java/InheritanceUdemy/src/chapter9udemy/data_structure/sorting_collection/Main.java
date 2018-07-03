@@ -103,5 +103,70 @@ public class Main {
 
         }
 
+        ///////NATURAL ORDER ////////
+
+        //it's present in TreeMap and TreeSet collections
+
+        List<String> arrayList = new ArrayList<>();
+        Set<String> treeSet = new TreeSet<>();
+
+        addElements(arrayList);
+        addElements(treeSet);
+        System.out.println("Elements' order in ArrayList:");
+        showElements(arrayList);
+        //in list we can use Collections.sort(list) to show elements in alphabetical order
+        System.out.println("Elements' order in TreeSet:");
+        showElements(treeSet);
+
+        //create collections with custom objects:
+
+        List<Person> arrayListPerson = new ArrayList<>();
+        Set<Person> treeSetPerson = new TreeSet<>();
+        addElementsObjects(arrayListPerson);
+        addElementsObjects(treeSetPerson);
+        System.out.println("\nList of Person objects:");
+        showElementsObjects(arrayListPerson);
+//        System.out.println("\nTreeSet of Person objects with descending alphabetical order:");
+        //we can use this method on TreeSet(or TreeMap) only if we implement interface Comparable in Person class
+        System.out.println("\n TreeSet of Person objects sorted by name's length:");
+        showElementsObjects(treeSetPerson);
+
+
+
     }
+
+    public static void addElements (Collection<String> col){
+        col.add("Katarzyna");
+        col.add("Natalia");
+        col.add("Ewa");
+        col.add("Vicky");
+        col.add("Barosz");
+        col.add("Anna");
+    }
+    public static void addElementsObjects (Collection<Person> col){
+        col.add(new Person("Katarzyna"));
+        col.add(new Person("Natalia"));
+        col.add(new Person("EWa"));
+        col.add(new Person("Vicky"));
+        col.add(new Person("Anna"));
+        col.add(new Person("Anita"));
+        col.add(new Person("Ada"));
+
+    }
+
+    public static void showElements (Collection<String> col){
+
+        for (String elem: col){
+            System.out.println(elem);
+        }
+
+    }
+    public static void showElementsObjects (Collection<Person> col){
+
+        for (Person elem: col){
+            System.out.println(elem);
+        }
+
+    }
+
 }
