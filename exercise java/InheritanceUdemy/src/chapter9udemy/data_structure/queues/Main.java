@@ -1,7 +1,9 @@
 package chapter9udemy.data_structure.queues;
 
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 import java.util.Queue;
+import java.util.concurrent.ArrayBlockingQueue;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,11 +12,11 @@ public class Main {
         QUEUES (KOLEJKI) - FIFO (First In, First Out)
         Queues have 'head'- first element added and 'tail' - last element added.
         Specific methods:
-        1. add(element)/offer(element) - add element to the tail of queue
-        2. element() - check (not removes) an element on head of the queue
+        1. add(element)/or offer(element) - add element to the tail of queue(add() (may throws exceptions)
+        2. element() - check (not removes) an element on head of the queue (may throws exceptions)
         3. peek() - similar to element() - show item current on head
         4. pool() -similar to remove()
-        5. remove() - retrieve and remove first element from queue (head)
+        5. remove() - retrieve and remove first element from queue (head)(may throws exceptions)
 
          */
 
@@ -35,6 +37,42 @@ public class Main {
         System.out.println("Which element is now a first element (on queue's head) - method .peek()? " + names.peek());
         System.out.println("Which element is now a first element (on queue's head) - method .element()? " + names.element());
 
+
+        //BlockingQueue has own capacity:
+        Queue<Integer> integers = new ArrayBlockingQueue<>(3);
+
+        integers.add(3);
+        integers.add(30);
+        integers.add(37);
+        //when we will put more items than is allowed (3), then method throws Exception(IllegalStateException: Queue full)
+        //we use try-catch
+        try {
+            integers.add(3);
+        } catch (IllegalStateException e) {
+            //(we should use LOGGER better than sout)
+            System.out.println("Tried to add more than 3 elements to the queue");
+        }
+
+        //when we will remove more items than are in queue, then method throws Exception (NoSuchElementException):
+        integers.remove();
+        integers.remove();
+        integers.remove();
+
+        try {
+            integers.remove();
+        } catch (NoSuchElementException e) {
+            System.out.println("Tried to remove more elements than are in queue");
+        }
+        //method element() throws now NoSuchElementException
+
+        try {
+            System.out.println("Head of queue is: "+integers.element());
+        } catch (NoSuchElementException e) {
+
+            System.out.println("Queue is empty");
+        }
+        //similar method peek() print out 'null' in this case:
+        System.out.println(integers.peek());
 
     }
 }
