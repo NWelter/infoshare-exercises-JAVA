@@ -2,6 +2,7 @@ package chapter9udemy.data_structure.queues;
 
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
+import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 
@@ -73,6 +74,29 @@ public class Main {
         }
         //similar method peek() print out 'null' in this case:
         System.out.println(integers.peek());
+
+        //Another type of queues is a Heap (sterta) - PriorityQueue
+
+        Queue<Integer> heapIntegers = new PriorityQueue<>();
+        heapIntegers.add(12);
+        heapIntegers.add(120);
+        heapIntegers.add(1);
+        heapIntegers.add(-7);
+        heapIntegers.add(2);
+        heapIntegers.add(1223);
+        heapIntegers.offer(56);
+
+        //in heaps items are sorted by specified or default comparator
+
+        for(Integer x:heapIntegers){
+            System.out.println(x);
+        }
+        System.out.println(heapIntegers.element()+" "+heapIntegers.peek());
+
+        while (!heapIntegers.isEmpty()){
+            System.out.println(heapIntegers.poll());
+        }
+
 
     }
 }
