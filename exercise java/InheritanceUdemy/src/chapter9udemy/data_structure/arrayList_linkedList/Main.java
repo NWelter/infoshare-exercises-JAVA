@@ -96,12 +96,16 @@ public class Main {
             System.out.print(integerArrayList.get(i) + " ");
 
         }
-        // 2.using methods from Iterator class:
+        // 2.using methods from Iterator class (a little bit old fashioned - before Java 5):
+        //using Iterator class has an one BIG advantage - we can remove elements with it (in loop for each is not possible)
         System.out.println("\nPrint elements of the integerArrayList with Iterator's class methods: ");
 
         for (Iterator<Integer> i = integerArrayList.iterator(); i.hasNext(); ) {
             System.out.print(i.next() + " ");
         }
+
+
+
         /*
         Explain a code above:
         - Iterator <Integer>: cause we use an object type (Iterator) not primitive (int), from list of Integer
@@ -110,7 +114,7 @@ public class Main {
         - iterator i++ is not necessary, cause we use method i.next() to search (and print) next element of the list
          */
 
-        // 3. using 'for each' loop:
+        // 3. using 'for each' loop -modern way (Java 5 and later versions):
         System.out.println("\nPrint list with a standard 'for each' loop: ");
         for (Integer value : integerArrayList) {
             System.out.print(value + " ");
