@@ -4,11 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-
         int[] array = new int[5];
-
-
-
 
 
         try {
@@ -18,13 +14,13 @@ public class Main {
 
             //2. Exception of wrong arithmetic operation:
 
-            System.out.println(5/0);
+            System.out.println(5 / 0);
 
             //3. Exception of assign value on variable which doesn't exist (ArrayIndexOutOfBoundsException):
-            array[5]=27;
+            array[5] = 27;
 
             //4. Exception of wrong type of stored variable (ArrayStoreException):
-            Object[] arrayObject = new String [5];
+            Object[] arrayObject = new String[5];
             //int instead String
             arrayObject[0] = 11;
 
@@ -43,9 +39,9 @@ public class Main {
             System.out.println(e.toString());
             System.out.println(e.getCause());
 
-        } catch (ArithmeticException a){
+        } catch (ArithmeticException a) {
             System.out.println(a.toString());
-        } catch (ArrayStoreException e){
+        } catch (ArrayStoreException e) {
             System.out.println(e.toString());
         }
 
@@ -58,16 +54,50 @@ public class Main {
 
         //we can pipe all Exceptions in one catch block (more readable):
 
-        try{
-            System.out.println(5/0);
-            array[5]=27;
-            Object[] arrayObject = new String [5];
+        try {
+            System.out.println(5 / 0);
+            array[5] = 27;
+            Object[] arrayObject = new String[5];
             arrayObject[0] = 11;
 
-        } catch (ArithmeticException|ArrayStoreException|ArrayIndexOutOfBoundsException e){
-            System.out.println("Message from 'pipe' of exceptions: "+e.toString());
+        } catch (ArithmeticException | ArrayStoreException | ArrayIndexOutOfBoundsException e) {
+            System.out.println("Message from 'pipe' of exceptions: " + e.toString());
         } finally {
             System.out.println("This part of code is not necessary, it will be executed regardless of code in try-catch parts.");
         }
+
+        //calling method factorial():
+
+        try{
+            System.out.println(factorial(15));
+            System.out.println(factorial(-3));
+        } catch (ArithmeticException e){
+            System.out.println(e.toString());
+        }
+
     }
+
+    //Creating a static method to calculate a factorial (!n):
+
+    public static int factorial(int n) {
+
+        if (n < 0) {
+
+            throw new ArithmeticException("Factorial of number less than 0 doesn't exist!");
+        }
+        if (n == 0 || n == 1) {
+
+            return 1;
+        }
+        //declaring an initial variable to calculate factorial:
+        int fact = 1;
+
+        for (int i = 2; i <= n; i++) {
+
+            fact *= i;
+        }
+        return fact;
+
+    }
+
 }
