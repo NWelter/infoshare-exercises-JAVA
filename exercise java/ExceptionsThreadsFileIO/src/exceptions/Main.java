@@ -52,7 +52,7 @@ public class Main {
 
          */
 
-        //we can pipe all Exceptions in one catch block (more readable):
+        //since Java 7 we can pipe all Exceptions in one catch block (more readable)- handling multiple exceptions:
 
         try {
             System.out.println(5 / 0);
